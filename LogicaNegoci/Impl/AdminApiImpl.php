@@ -2280,7 +2280,7 @@ JOIN departament as d ON d.iddepartament = p.id_dep
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
             $mail->Port       = 465;
             //Recipients
-            $mail->setFrom('sebastiand.onyx@gmail.com', 'Ausencias y Vacaciones Grupo Minim');
+            $mail->setFrom('sebastiand.onyx@gmail.com', 'Ausencias y Vacaciones Gora');
 
             $mail->addAddress($EMAIL);               //Name is optional
 
@@ -2832,7 +2832,7 @@ JOIN departament as d ON d.iddepartament = p.id_dep
 
             $parm = $lng."|".$rsemp[0]["idexcepcio"];
 
-            $URLProc = "https://grupo-minim.controlpresencia.online/";
+            $URLProc = "https://gora.controlpresencia.online/";
 
             $MSJ = str_replace("%URLOPEN%", $URLProc , $MSJ);
 
@@ -2905,7 +2905,7 @@ JOIN departament as d ON d.iddepartament = p.id_dep
 
             $parm = $lng."|".$rsemp[0]["idexcepcio"];
 
-            $URLProc = "https://grupo-minim.controlpresencia.online/";
+            $URLProc = "https://gora.controlpresencia.online/";
 
             $MSJ = str_replace("%URLOPEN%", $URLProc , $MSJ);
 
@@ -7434,14 +7434,14 @@ GROUP BY t1.idempleat, DATE(t1.datahora) ORDER BY e.numafiliacio";
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                 $mail->Port       = 465;
 
-                $mail->setFrom('sebastiand.onyx@gmail.com', 'grupo-minim.controlpresencia.online');
+                $mail->setFrom('sebastiand.onyx@gmail.com', 'gora.controlpresencia.online');
                 $mail->addAddress($email_to_send, 'Receptor');
 
                 $mail->isHTML(true);
-                $mail->Subject = 'Marcajes de relleno y Marcajes no realizados Grupo Minim control Presencia';
+                $mail->Subject = 'Marcajes de relleno y Marcajes no realizados Gora control Presencia';
 
                 $mensaje = "
-                    <p style='font-size: 18px; font-weight: bold;'> Informacion control presencial Minim de marcajes de relleno y Personas que no han hecho marcajes</p>
+                    <p style='font-size: 18px; font-weight: bold;'> Informacion control presencial Gora de marcajes de relleno y Personas que no han hecho marcajes</p>
                     <ul>
                         <li> Marcajes de relleno no reportados a la fecha </li>
                         <li> Marcajes no realizados no reportados a la fecha </li>
@@ -7864,7 +7864,7 @@ GROUP BY t1.idempleat, DATE(t1.datahora) ORDER BY e.numafiliacio";
             {
                 if($nomina['id_emp'] == $employee['idempleat'])
                 {
-                    $nomina_pdf = 'https://grupo-minim.controlpresencia.online/' .$nomina['route'];
+                    $nomina_pdf = 'https://gora.controlpresencia.online/' .$nomina['route'];
                     break;
                 }
             }
@@ -7884,16 +7884,16 @@ GROUP BY t1.idempleat, DATE(t1.datahora) ORDER BY e.numafiliacio";
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                     $mail->Port       = 465;
     
-                    $mail->setFrom('sebastiand.onyx@gmail.com', 'grupo-minim.controlpresencia.online');
+                    $mail->setFrom('sebastiand.onyx@gmail.com', 'gora.controlpresencia.online');
                     $mail->addAddress($email, 'Receptor');
     
                     $mail->isHTML(true);
-                    $mail->Subject = 'Notificación de carga de Nómina Grupo Minim';
+                    $mail->Subject = 'Notificación de carga de Nómina Gora';
     
                     $mensaje = "
-                    <p style='font-size: 18px; font-weight: bold;'> ¡La Nómina $month  $any ha sido cargada exitosamente control presencia Grupo Minim!</p>
+                    <p style='font-size: 18px; font-weight: bold;'> ¡La Nómina $month  $any ha sido cargada exitosamente control presencia Gora!</p>
                     <p style='font-size: 16px;'> Estimado usuario,</p>
-                    <p style='font-size: 16px;'> Nos complace informarte que la nómina correspondiente ha sido cargada con éxito en el control presencia grupo Minim.</p>
+                    <p style='font-size: 16px;'> Nos complace informarte que la nómina correspondiente ha sido cargada con éxito en el control presencia gora.</p>
                     <p style='font-size: 16px;'> Puedes acceder a tu nómina utilizando el siguiente enlace:</p>
                     <a href='" . $nomina_pdf . "' style='font-size: 16px; color: #007BFF; text-decoration: none;' target='_blank'>Ver Nómina</a>
             

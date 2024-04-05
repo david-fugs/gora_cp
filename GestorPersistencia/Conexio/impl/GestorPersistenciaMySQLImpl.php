@@ -45,9 +45,9 @@ class GestorPersistenciaMySQLImpl implements GestorPersistenciaMySQL
 
 
         $this->host = "localhost"; //$host;
-        $this->baseDeDades = "minim_cp"; //$dbname;
+        $this->baseDeDades = "nuevos_cps"; //$dbname;
         $this->user = "proyectos"; //$user;
-        $this->password = "4lzCw66_"; //$password;//4lzCw66_
+        $this->password = ""; //$password;//4lzCw66_
 
         /*
           $this->host = "localhost";//$host;
